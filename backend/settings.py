@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+j!jgou-=qykb_=qx3*nsi+ft(7h$^2n!zv3ee+o%8^3!k_1p%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["https://django-dep-1.onrender.com/"]
-CORS_ALLOW_CREDENTIALS = True
+ALLOWED_HOSTS = "django-dep-1.onrender.com",
+CORS_ALLOW_CREDENTIALS = False
 
 
 # Application definition
@@ -129,7 +129,9 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ORIGIN_ALLOW = [
+CORS_ALLOWED_ORIGINS = [
     'https://react-dep-ten.vercel.app/'
 ]
-CORS_ALLOW_CREDENTIALS = False
+CSRF_TRUSTED_ORIGINS = [
+    "https://react-dep-ten.vercel.app",
+]
